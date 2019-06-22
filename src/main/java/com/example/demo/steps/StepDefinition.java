@@ -15,11 +15,12 @@ public class StepDefinition {
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\ANON\\Desktop\\trash\\chrome\\chromedriver.exe");
 		wd = new ChromeDriver();
 		wd.get(url);
+		System.out.println(url);
 	}
 
 	@Then("^get json response$")
 	public void get_json_response() throws Throwable {
-	    System.out.println(wd.getPageSource());
+	    System.out.println(wd.getTitle());
 	}
 
 }
