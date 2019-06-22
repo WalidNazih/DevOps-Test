@@ -10,7 +10,7 @@ pipeline {
         
         stage('Build'){
         	steps{
-        	    bat 'java -jar target/DevOpsDemo1.jar'
+        	    bat 'java -jar target/DevOpsDemo-1.jar'
         	}
         }
         
