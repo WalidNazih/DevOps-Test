@@ -8,18 +8,28 @@ pipeline {
         	}
         }
         
-        stage('Build'){
-        	steps{
-        	    bat 'java -jar target/DevOpsDemo-1.jar'
-        	}
-        }
-        
-        stage('Test'){
-        	steps {
-	            bat 'mvn test'
-	        }
+        parallel branchone:{
             
+	        stage('Build'){
+	        	steps{
+	        	    bat 'java -jar target/DevOpsDemo-1.jar'
+	        	}
+	        }
+	        
+	        
+        }, branchtwo:{
+            stage('Test'){
+	        	steps {
+	        		sleep 10
+		            bat 'mvn test'
+		        }
+	            
+	        }
         }
+		
+		failFast: true
+
+        
 
 
     }
