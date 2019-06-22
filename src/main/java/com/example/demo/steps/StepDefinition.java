@@ -1,5 +1,6 @@
 package com.example.demo.steps;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -20,7 +21,7 @@ public class StepDefinition {
 
 	@Then("^get json response$")
 	public void get_json_response() throws Throwable {
-	    System.out.println(wd.getTitle());
+	    System.out.println(wd.findElement(By.tagName("body")).getText());
 	}
 
 }
