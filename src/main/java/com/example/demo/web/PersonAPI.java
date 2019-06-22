@@ -1,5 +1,6 @@
 package com.example.demo.web;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,8 @@ public class PersonAPI {
 	
 	@GetMapping
 	public List<Person> getPersons() {
+		
+		persons = new ArrayList<>();
 		
 		persons.add(new Person(1L, "walid", 12));
 		persons.add(new Person(2L, "hassan", 12));
