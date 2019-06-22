@@ -1,4 +1,4 @@
-package com.example.demo.steps;
+package com.example.demo.runners;
 
 import org.junit.runner.RunWith;
 
