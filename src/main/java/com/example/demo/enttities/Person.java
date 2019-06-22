@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Person {
 	
-	private Long id;
-	private String name;
-	private int age;
+	protected Long id;
+	protected String name;
+	protected int age;
 	
 
 }
